@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../main.dart'; // Importamos para usar el Footer
+import '../main.dart'; // <--- ESTO ES LO MÁS IMPORTANTE
 
 class NFLogoPage extends StatelessWidget {
   const NFLogoPage({super.key});
@@ -14,9 +14,18 @@ class NFLogoPage extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () => Navigator.pushNamed(context, '/segunda'),
-              child: Image.network(
-                'https://raw.githubusercontent.com/damian56667/IAMoviles-Act-11-Navegaci-n-entre-3-pantallas-/refs/heads/main/logo-removebg-preview.png',
+              child: Container(
                 width: 280,
+                height: 280,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  image: const DecorationImage(
+                    image: NetworkImage(
+                      'https://raw.githubusercontent.com/damian56667/IAMoviles-Act-11-Navegaci-n-entre-3-pantallas-/refs/heads/main/logo-removebg-preview.png',
+                    ),
+                    fit: BoxFit.contain,
+                  ),
+                ),
               ),
             ),
             const SizedBox(height: 50),
@@ -24,9 +33,22 @@ class NFLogoPage extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(context, '/segunda'),
               style: OutlinedButton.styleFrom(
                 side: const BorderSide(color: Color(0xFFFFE600), width: 2),
-                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 50,
+                  vertical: 15,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
-              child: const Text('ENTRAR', style: TextStyle(color: Color(0xFFFFE600))),
+              child: const Text(
+                'ENTRAR',
+                style: TextStyle(
+                  color: Color(0xFFFFE600),
+                  letterSpacing: 3,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         ),

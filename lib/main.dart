@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/widgets/pagina%202.dart';
-import 'package:myapp/widgets/pagina1.dart';
-import 'package:myapp/widgets/pagina3.dart';
+import 'widgets/pagina1.dart';
+import 'widgets/pagina2.dart';
+import 'widgets/pagina3.dart';
+
 void main() => runApp(const NFApp());
 
 class NFApp extends StatelessWidget {
@@ -22,8 +23,7 @@ class NFApp extends StatelessWidget {
   }
 }
 
-// --- WIDGETS COMPARTIDOS (Footer y Drawer) ---
-// Los dejo aquí o puedes crear un archivo 'widgets.dart' e importarlo
+// --- WIDGET DE PIE DE PÁGINA (FOOTER) ---
 class NFFooter extends StatelessWidget {
   const NFFooter({super.key});
   @override
@@ -35,12 +35,17 @@ class NFFooter extends StatelessWidget {
       child: const Text(
         'Damian Dominguez 6-I',
         textAlign: TextAlign.center,
-        style: TextStyle(color: Color(0xFFFFE600), fontWeight: FontWeight.bold),
+        style: TextStyle(
+          color: Color(0xFFFFE600),
+          fontWeight: FontWeight.bold,
+          letterSpacing: 1.2,
+        ),
       ),
     );
   }
 }
 
+// --- WIDGET PARA EL MENÚ LATERAL ---
 class NFDrawer extends StatelessWidget {
   const NFDrawer({super.key});
   @override
@@ -51,12 +56,30 @@ class NFDrawer extends StatelessWidget {
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(color: Color(0xFFFFE600)),
-            child: Center(child: Text('Menú de Fragancias', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.black,
+                  child: Text('NF', style: TextStyle(color: Colors.yellow)),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Menú de Fragancias',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
           ),
           ListTile(
             leading: const Icon(Icons.home),
-            title: const Text('Inicio'),
-            onTap: () => Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false),
+            title: const Text('Inicio / Logo'),
+            onTap: () => Navigator.pushNamedAndRemoveUntil(
+              context,
+              '/',
+              (route) => false,
+            ),
           ),
           ListTile(
             leading: const Icon(Icons.category),
@@ -65,7 +88,7 @@ class NFDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.shopping_bag),
-            title: const Text('Catálogo'),
+            title: const Text('Catálogo Completo'),
             onTap: () => Navigator.pushNamed(context, '/tercera'),
           ),
         ],

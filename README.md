@@ -1,11 +1,10 @@
 # myapp
-<img width="1229" height="719" alt="image" src="https://github.com/user-attachments/assets/fcd7dc96-db76-4753-a635-23c3dff1f0c8" />
-<img width="1209" height="806" alt="image" src="https://github.com/user-attachments/assets/2330a1bd-a290-4837-858d-e90bc2b98cee" />
-<img width="1222" height="798" alt="image" src="https://github.com/user-attachments/assets/e61db76a-7700-4d58-bb49-2462900d0df2" />
-<img width="854" height="612" alt="image" src="https://github.com/user-attachments/assets/0c9be954-57a5-40d0-8fab-7c060f0147fe" />
-<img width="389" height="679" alt="image" src="https://github.com/user-attachments/assets/20ddd2bf-9c7d-40e8-b2f1-f5814c0b8000" />
-<img width="376" height="685" alt="image" src="https://github.com/user-attachments/assets/4383eebd-3374-461c-b065-470613f83c7e" />
-<img width="394" height="675" alt="image" src="https://github.com/user-attachments/assets/e7921432-39e7-4fc9-9a2d-946e9bb5970f" />
+<img width="1284" height="505" alt="image" src="https://github.com/user-attachments/assets/a732b562-5b15-4848-b86f-ae1713b69046" />
+<img width="1296" height="538" alt="image" src="https://github.com/user-attachments/assets/8055f1ba-a47e-4d9d-b6ed-2e969d7f48f5" />
+<img width="1035" height="794" alt="image" src="https://github.com/user-attachments/assets/d40147f6-042d-4035-a5f8-9e54d92c4637" />
+<img width="421" height="718" alt="image" src="https://github.com/user-attachments/assets/50b2855b-71f9-47cd-9959-5e8ef5e2ca72" />
+<img width="427" height="711" alt="image" src="https://github.com/user-attachments/assets/459e8de9-2f9e-4ebb-9cd7-f1090314941f" />
+<img width="409" height="747" alt="image" src="https://github.com/user-attachments/assets/97cf3161-c2f2-40f8-9a0e-79eb80c701bc" />
 
 A new Flutter project.
 ## promt 
